@@ -1,0 +1,54 @@
+/* WhatsApp e SDR (F3, 24/11/2026) */
+.sdr{display:grid;gap:14px}
+.sdr-card{display:grid;gap:14px}
+.sdr-card h2{margin:0;font-size:16px}
+.sdr-grade{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sdr-linha{display:flex;gap:8px;align-items:center}
+.sdr-linha .input{flex:1;min-width:0}
+.sdr-check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.4;cursor:pointer}
+.sdr-check input{margin-top:3px;flex:0 0 auto}
+.sdr-falta{margin:6px 0 0;padding-left:18px;display:grid;gap:3px}
+@media (max-width:720px){.sdr-grade{grid-template-columns:1fr}.sdr-linha{flex-wrap:wrap}}
+
+/* Conversas (F5, 24/11/2026) */
+.cv{display:grid;gap:14px}
+.cv-som{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);cursor:pointer}
+.cv-abas{display:flex;gap:6px;flex-wrap:wrap}
+.cv-aba{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--text-2);cursor:pointer}
+.cv-aba b{font-variant-numeric:tabular-nums;margin-left:4px;color:var(--muted)}
+.cv-aba.on{background:var(--primary-soft);border-color:var(--primary);color:var(--text)}
+.cv-grade{display:grid;grid-template-columns:minmax(260px,340px) minmax(0,1fr);gap:14px;align-items:start}
+.cv-lista{display:grid;gap:8px;max-height:70vh;overflow:auto}
+.cv-item{text-align:left;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:11px 12px;display:grid;gap:6px;cursor:pointer;color:inherit}
+.cv-item:hover{border-color:var(--border-strong)} .cv-item.on{border-color:var(--primary);background:var(--surface-2)}
+.cv-item.urgente{border-color:var(--bad);box-shadow:0 0 0 1px color-mix(in srgb,var(--bad) 40%,transparent)}
+.cv-topo{display:flex;justify-content:space-between;gap:8px} .cv-badges{display:flex;gap:6px;flex-wrap:wrap}
+.cv-prev{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cv-det{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:16px;display:grid;gap:12px;min-width:0}
+.cv-cab{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap} .cv-cab h2{margin:0;font-size:17px}
+.cv-resumo{background:var(--warn-soft);border:1px solid color-mix(in srgb,var(--warn) 30%,transparent);border-radius:var(--r);padding:10px 12px;display:grid;gap:4px} .cv-resumo p{margin:0}
+.cv-acoes{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.cv-fio{display:grid;gap:8px;max-height:46vh;overflow:auto}
+.cv-msg{max-width:88%;border-radius:12px;padding:8px 11px;display:grid;gap:4px;background:var(--surface-2)}
+.cv-msg.lead{justify-self:start} .cv-msg.nos{justify-self:end;background:var(--primary-soft)}
+.cv-msg.sug{background:transparent;border:1px dashed var(--border-strong)}
+.cv-rot{font-size:11.5px;color:var(--muted)} .cv-txt{white-space:pre-wrap;overflow-wrap:anywhere}
+.cv-vazio{padding:18px;text-align:center}
+.kc.aguardando{border-color:var(--bad);box-shadow:0 0 0 1px color-mix(in srgb,var(--bad) 45%,transparent)}
+.cv-pulso{animation:cvPulso 1.6s ease-in-out infinite}
+@keyframes cvPulso{50%{opacity:.55}}
+@media (prefers-reduced-motion:reduce){.cv-pulso{animation:none}}
+@media (max-width:820px){.cv-grade{grid-template-columns:1fr}.cv-lista{max-height:none}}
+
+/* Conectar canais (24/11/2026) */
+.cn{display:grid;gap:14px}
+.cn-larga{grid-column:1 / -1}
+.cn textarea.input{width:100%;resize:vertical;font:inherit;line-height:1.45}
+.cn-passos{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.cn-passo{display:flex;gap:14px;align-items:flex-start;padding:14px;border:1px solid var(--border);border-radius:var(--r);background:var(--surface-2,var(--surface))}
+.cn-passo.feito{border-color:color-mix(in srgb,var(--ok,#42d392) 55%,transparent)}
+.cn-n{flex:0 0 34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;background:var(--primary-soft);color:var(--text)}
+.cn-passo.feito .cn-n{background:color-mix(in srgb,var(--ok,#42d392) 22%,transparent)}
+.cn-corpo{display:grid;gap:8px;min-width:0} .cn-corpo h3{margin:0;font-size:15px}
+.cn-corpo ul{margin:0;padding-left:18px;display:grid;gap:3px;font-size:13.5px;line-height:1.45}
+.cn-atencao{margin:0;font-size:12.5px;color:var(--muted);line-height:1.4}

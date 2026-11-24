@@ -1,0 +1,35 @@
+/* Modos de cor do NEXO System. "escuro" é o padrão (variáveis do index.html).
+   "cafe" é o modo claro no estilo das artes NEXO Marketing: creme, azul-marinho e contorno de adesivo. */
+:root[data-tema="cafe"]{
+  --bg:#F6EFE2; --panel:#FFFCF5; --card:#FFF7EA; --line:#16224D; --cyan:#1E5BB8; --fg:#16224D; --muted:#5C6684; --dark:#FFFFFF;
+  --ok:#1E8A4C; --warn:#A86A00; --bad:#C2413A;
+  --borda:color-mix(in srgb,#16224D 40%,transparent); --fina:color-mix(in srgb,#16224D 16%,transparent);
+  --destaque-fundo:#fff; --destaque-borda:#16224D; color-scheme:light;
+}
+[data-tema="cafe"] .lado{background:#FFF6E6}
+[data-tema="cafe"] .card{border:2px solid #16224D;box-shadow:4px 4px 0 #16224D}
+[data-tema="cafe"] .menu button:hover{background:#fff}
+[data-tema="cafe"] .menu button[aria-current="page"]{background:var(--onca);color:#16224D;box-shadow:2px 2px 0 #16224D}
+[data-tema="cafe"] .menu button b{background:#16224D;color:#fff}
+[data-tema="cafe"] .btn{background:#fff;border:2px solid #16224D;color:#16224D;box-shadow:2px 2px 0 #16224D}
+[data-tema="cafe"] .btn:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #16224D}
+[data-tema="cafe"] .btn.prim,[data-tema="cafe"] .btn.onca{background:var(--onca);color:#16224D}
+[data-tema="cafe"] .btn.sim{background:#1E8A4C;color:#fff}
+[data-tema="cafe"] .btn.nao{background:#fff;color:var(--bad)}
+[data-tema="cafe"] .sair{background:#fff;color:#16224D}
+[data-tema="cafe"] .sw span{background:#cfc6b3}
+[data-tema="cafe"] .onca{color:#9a5b00}
+[data-tema="cafe"] .plat-marca b{color:#16224D}
+[data-tema="cafe"] .plat-marca span{color:#5C6684;opacity:1}
+[data-tema="cafe"] .plat-marca img{box-shadow:0 0 0 2px #16224D,2px 2px 0 2px #16224D}
+[data-tema="cafe"] .areas{background:#F1E5CF;border:2px solid #16224D}
+[data-tema="cafe"] .areas a{color:#5C6684}
+[data-tema="cafe"] .areas a:hover{color:#16224D;background:rgba(255,255,255,.6)}
+[data-tema="cafe"] .areas a[aria-current="page"]{color:#16224D;background:#fff;box-shadow:inset 0 0 0 2px #16224D}
+[data-tema="cafe"] .eq{--eq-sombra:#16224D}
+[data-tema="cafe"] .eq-hero{background:#FFF1D8;border:2.5px solid #16224D;box-shadow:5px 5px 0 #16224D}
+[data-tema="cafe"] .eq-stat{background:#fff;border:2px solid #16224D}
+[data-tema="cafe"] .eq-xp{background:#EADFC9}
+[data-tema="cafe"] .eq-mascote{box-shadow:4px 4px 0 #16224D}
+[data-tema="cafe"] .eq-ficha-fundo,[data-tema="cafe"] .ap-fundo{background:rgba(22,34,77,.35)}
+[data-tema="cafe"] .toast{background:#fff;border:2px solid #16224D;color:#16224D}

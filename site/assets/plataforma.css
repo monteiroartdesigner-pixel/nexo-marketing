@@ -1,0 +1,60 @@
+/* Plataforma NEXO: peças comuns ao NEXO System e ao NEXO Prospect (marca, troca de área e tipografia).
+   Cada área mantém a sua cor de destaque em --destaque. */
+:root{ --plat-f:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --plat-ft:"Syne","Inter",sans-serif;
+  --plat-prata:#C9CFD8; --plat-borda:rgba(201,207,216,.14); --plat-fundo:#0A0D14; }
+
+.plat-marca{display:flex;align-items:center;gap:10px;min-width:0;text-decoration:none;color:inherit}
+.plat-marca img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:0 0 auto;
+  box-shadow:0 0 0 1px var(--plat-borda),0 6px 16px rgba(0,0,0,.45)}
+.plat-marca .txt{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+.plat-marca b{font-family:var(--plat-ft);font-weight:800;font-size:16px;letter-spacing:.22em;color:#F1F3F6}
+.plat-marca span{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--plat-prata);opacity:.75;white-space:nowrap}
+
+/* troca de área: as duas áreas da mesma plataforma */
+.areas{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:3px;border-radius:11px;background:var(--plat-fundo);border:1px solid var(--plat-borda)}
+.areas a{display:flex;align-items:center;justify-content:center;gap:7px;height:32px;padding:0 8px;border-radius:8px;
+  font:600 12.5px/1 var(--plat-f);color:#9AA3B2;text-decoration:none;white-space:nowrap;transition:background .16s,color .16s}
+.areas a:hover{color:#F1F3F6;background:rgba(255,255,255,.04)}
+.areas a[aria-current="page"]{color:#fff;background:var(--destaque-fundo,#1B2A4A);box-shadow:inset 0 0 0 1px var(--destaque-borda,rgba(59,130,246,.45))}
+.areas i{width:7px;height:7px;border-radius:50%;flex:0 0 auto}
+.areas .sys i{background:#2B8CEB} .areas .pro i{background:#7AA2FF}
+
+.plat-logo-grande{width:min(240px,70%);aspect-ratio:560/489;object-fit:cover;border-radius:18px;display:block;margin:0 auto 4px;
+  box-shadow:0 0 0 1px var(--plat-borda),0 18px 40px rgba(0,0,0,.55)}
+@media (prefers-reduced-motion:reduce){.areas a{transition:none}}
+
+/* janela de aparência (logo e cores) */
+.plat-marca.botao{background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit;text-align:left;position:relative;border-radius:12px}
+.plat-marca.botao:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+.plat-marca.botao .lapis{position:absolute;left:26px;top:26px;width:18px;height:18px;border-radius:50%;background:var(--onca);color:#16224D;
+  display:grid;place-items:center;font-size:10px;border:2px solid var(--bg);opacity:0;transform:scale(.6);transition:opacity .16s,transform .16s}
+.plat-marca.botao:hover .lapis,.plat-marca.botao:focus-visible .lapis{opacity:1;transform:none}
+@media (hover:none){.plat-marca.botao .lapis{opacity:1;transform:none}}
+.ap-fundo{position:fixed;inset:0;background:rgba(3,6,12,.6);z-index:50;display:grid;place-items:center;padding:16px}
+.ap{width:min(520px,100%);max-height:calc(100dvh - 32px);overflow:auto;background:var(--panel);border:1px solid var(--borda);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:18px}
+[data-tema="cafe"] .ap{border:2.5px solid #16224D;box-shadow:6px 6px 0 #16224D}
+.ap h3{margin:0 0 8px}
+.ap-logo{display:flex;gap:14px;align-items:center}
+.ap-logo .previa{width:84px;height:84px;border-radius:20px;object-fit:cover;background:#fff;border:2px solid var(--borda);flex:0 0 auto}
+.ap-opcoes{display:flex;gap:8px;flex-wrap:wrap}
+.ap-pre{width:52px;height:52px;border-radius:14px;overflow:hidden;border:2px solid var(--fina);background:#fff;padding:0;cursor:pointer}
+.ap-pre img{width:100%;height:100%;object-fit:cover;display:block}
+.ap-pre[aria-pressed="true"]{border-color:var(--onca);box-shadow:0 0 0 3px color-mix(in srgb,var(--onca) 40%,transparent)}
+.ap-modos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ap-modo{border:2px solid var(--fina);border-radius:14px;padding:10px;background:none;cursor:pointer;text-align:left;color:var(--fg);display:flex;flex-direction:column;gap:8px;font-weight:700}
+.ap-modo[aria-pressed="true"]{border-color:var(--onca)}
+.ap-modo .amostra{height:46px;border-radius:9px;display:flex;gap:6px;padding:8px}
+.ap-modo .amostra i{flex:1;border-radius:5px}
+.ap-cores{display:flex;gap:10px;flex-wrap:wrap}
+.ap-cor{width:38px;height:38px;border-radius:50%;border:3px solid var(--panel);box-shadow:0 0 0 2px var(--fina);cursor:pointer;padding:0}
+.ap-cor[aria-pressed="true"]{box-shadow:0 0 0 3px var(--fg)}
+.ap-nota{font-size:12.5px;color:var(--muted)}
+
+/* Um produto por vez (Marketing e Prospect são separados; o login é um só). O nome do produto no lugar do seletor. */
+.areas.produto{grid-template-columns:1fr;gap:6px;padding:8px 10px}
+.produto-atual{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;color:#fff;letter-spacing:.02em}
+.produto-atual i{width:8px;height:8px;border-radius:50%;background:#2B8CEB;flex:0 0 auto}
+.produto-outro{font-size:.78rem;color:#9fb2d3;text-decoration:none}
+.produto-outro:hover{color:#fff;text-decoration:underline}
+[data-tema="claro"] .produto-atual,[data-tema="cafe"] .produto-atual{color:#0F172A}
+[data-tema="claro"] .produto-outro,[data-tema="cafe"] .produto-outro{color:#5B6577}
