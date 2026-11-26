@@ -1,0 +1,69 @@
+/* ESTÚDIO · ferramentas de escrita do Instagram (fase 1, 26/11/2026) */
+.es{display:flex;flex-direction:column;gap:14px;min-width:0}
+.es-abas{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}
+.es-abas button{flex:0 0 auto;border:1px solid var(--fina);background:var(--panel);color:var(--muted);border-radius:999px;padding:8px 14px;font-weight:600;font-size:13.5px;cursor:pointer;transition:background .16s,color .16s,border-color .16s}
+.es-abas button:hover{color:var(--fg)}
+.es-abas button[aria-pressed="true"]{color:var(--fg);background:var(--destaque-fundo,#13233F);border-color:var(--destaque-borda,var(--line))}
+.es-abas button:focus-visible,.es-tipos button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+#esCorpo{display:flex;flex-direction:column;gap:14px;min-width:0}
+.es-lista,.es-grade{display:grid;gap:12px}
+.es-grade{grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))}
+.es-credito{margin:4px 0 0}
+
+/* nota do gancho */
+.es-nota{display:flex;flex-direction:column;gap:12px}
+.es-frase{font-size:15.5px;line-height:1.35;min-width:0;overflow-wrap:anywhere}
+.es-top{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--bg);background:var(--onca);border-radius:6px;padding:2px 6px;vertical-align:2px}
+.es-num{font-family:var(--ft);font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.es-checks{display:grid;gap:8px}
+.es-check{display:grid;grid-template-columns:120px minmax(60px,1fr) 34px;grid-template-areas:"nome barra n" "det det det";align-items:center;column-gap:10px;row-gap:2px;padding:6px 8px;border-radius:10px}
+.es-check>span:first-child{grid-area:nome;font-size:13px;font-weight:600}
+.es-check .es-barra{grid-area:barra}
+.es-check>b{grid-area:n;text-align:right;font-variant-numeric:tabular-nums;font-size:13px}
+.es-check small{grid-area:det;font-size:12.5px}
+.es-check.pior{background:color-mix(in srgb,var(--warn) 9%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--warn) 35%,transparent)}
+.es-barra{display:block;height:7px;border-radius:99px;background:color-mix(in srgb,var(--fg) 10%,transparent);overflow:hidden}
+.es-barra i{display:block;height:100%;border-radius:inherit;background:var(--line)}
+.es-barra i.ok{background:var(--ok)} .es-barra i.warn{background:var(--warn)}
+
+/* fórmulas */
+.es-regras{margin:0;padding-left:20px;display:grid;gap:4px;font-size:13.5px;color:var(--muted)}
+.es-form{display:flex;flex-direction:column;gap:8px}
+.es-id{flex:0 0 auto;display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:var(--dark);border:1px solid var(--fina);font-weight:700;font-size:13px;font-variant-numeric:tabular-nums}
+.es-modelo{margin:0;font-weight:600;color:var(--cream)}
+.es-tela{display:inline-block;font:800 12px/1.3 var(--ft);letter-spacing:.04em;background:var(--fg);color:var(--bg);padding:2px 7px;border-radius:5px}
+
+/* legenda */
+.es-duas{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:14px;align-items:start}
+.es-feed{border:1px solid var(--fina);border-radius:16px;background:#000;overflow:hidden;font-size:14px}
+.es-feed-cab{display:flex;align-items:center;gap:8px;padding:10px 12px}
+.es-avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--onca),var(--line))}
+.es-feed-img{aspect-ratio:4/5;background:repeating-linear-gradient(45deg,#0d1626 0 12px,#101b2e 12px 24px)}
+.es-feed-txt{margin:0;padding:10px 12px 14px;line-height:1.4;overflow-wrap:anywhere}
+.es-itens{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.es-itens li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;padding:8px 0;border-top:1px solid var(--fina)}
+.es-itens li:first-child{border-top:0;padding-top:0}
+.es-pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.5 var(--f);background:var(--dark);border:1px solid var(--fina);border-radius:12px;padding:12px}
+
+/* tempo do roteiro */
+.es-tabela{display:grid;gap:2px;font-size:14px}
+.es-tr{display:grid;grid-template-columns:64px 60px 130px minmax(0,1fr);gap:10px;align-items:baseline;padding:8px 6px;border-radius:8px}
+.es-th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.es-tr.alerta{background:color-mix(in srgb,var(--warn) 8%,transparent)}
+.es-mono{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:13px}
+.es-alerta{display:block;color:var(--warn);font-size:12.5px;margin-top:2px}
+
+/* pedir à equipe */
+.es-tipos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:8px}
+.es-tipos button{display:flex;flex-direction:column;gap:4px;text-align:left;border:1px solid var(--fina);background:var(--dark);border-radius:12px;padding:12px;cursor:pointer;color:var(--fg)}
+.es-tipos button span{font-size:12.5px;color:var(--muted)}
+.es-tipos button[aria-pressed="true"]{border-color:var(--onca);box-shadow:inset 0 0 0 1px var(--onca)}
+
+@media (max-width:860px){
+  .es-duas{grid-template-columns:1fr}
+  .es-feed{max-width:360px}
+  .es-tr{grid-template-columns:54px 52px minmax(0,1fr)}
+  .es-tr>span:nth-child(3){display:none}
+  .es-check{grid-template-columns:96px minmax(40px,1fr) 30px}
+}
+@media (prefers-reduced-motion:reduce){.es-abas button{transition:none}}
