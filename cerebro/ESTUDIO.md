@@ -1,6 +1,6 @@
 # Pedidos do Estúdio no cérebro
 
-Desde 26/11/2026 as regras ficam na **seção 3c** de `cerebro/INSTRUCOES.md` do repositório do agente
+Desde 26/11/2026 as regras ficam na **seção 3d** de `cerebro/INSTRUCOES.md` do repositório do agente
 (`nexo-varzea-agente`), que é o que a rotina do cérebro lê. Este arquivo só aponta para lá.
 
 - Pedido: o Estúdio grava na fila do Pedir peça um texto que começa com `[Estúdio · Roteiro de Reels…]`,

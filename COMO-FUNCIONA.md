@@ -1,6 +1,6 @@
 # NEXO Marketing: como funciona agora
 
-Atualizado em 26/11/2026. O que mudou desde 24/11, em ordem, e como você usa.
+Atualizado em 26/11/2026 (tarde). O que mudou desde 24/11, em ordem, e como você usa.
 
 ## 1. O endereço e o login
 
@@ -47,7 +47,10 @@ Stories** para a fila do Pedir peça.
 
 ## 5. Como uma peça nasce agora
 
-1. Você pede em **Pedir peça** ou no **Estúdio** (ou a equipe cria as peças do dia sozinha).
+1. Você pede em **Pedir peça** ou no **Estúdio**, ou a equipe cria as **2 peças do dia** sozinha. Desde 26/11
+   elas são **uma do @nexo.rm** (o seu canal: ensinar, bastidor, opinião, prova) e **uma do NEXO Prospect**,
+   no visual NEXO e com print da plataforma quando ajudar. Peças do **Várzea** e do **Sport** só nascem quando
+   você pede (escolha a marca no pedido).
 2. O cérebro trabalha nas rodadas das **06:10, 12:10 e 18:10**. Ele lê a **voz nova** e os fatos e, nos pedidos
    do Estúdio, segue o passo a passo das skills: três ganchos de fórmulas diferentes com nota, roteiro com tempo
    e final que repete o gancho.
@@ -58,9 +61,8 @@ Stories** para a fila do Pedir peça.
 ## 6. O que ainda depende de você
 
 1. **Registro CNAME na Hostinger** (item 1).
-2. **As peças automáticas do dia ainda são do Várzea.** A regra do cérebro (seção 3 das instruções) cria 2 peças
-   do NEXO VÁRZEA por dia. Com a fila vazia, a rodada de amanhã às 06:10 já vai criar duas peças do Várzea
-   (com a voz nova). Se o @nexo.rm agora é o seu canal com o Prospect na frente, essa regra precisa mudar.
+2. **Conferir as primeiras peças do novo jeito** em Aprovar, depois da rodada das 06:10 de 27/11 (uma do
+   @nexo.rm e uma do Prospect). Recusar com o motivo ensina a equipe: o motivo vira regra para as próximas.
 3. **A Onça responder sozinha só nos posts do Várzea.** Nos posts sem marca, a pergunta iria para você. É mudança
    de código, com teste.
 4. **A campanha "comenta PROSPECT":** pronta e desligada. Liga depois de você aprovar os textos.
