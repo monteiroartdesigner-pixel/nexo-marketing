@@ -18,7 +18,7 @@ const EST_PEDIDOS = {
   carrossel: { nome: "Carrossel", prefixo: "[Estúdio · Carrossel: capa que faz arrastar, 5 a 7 slides com uma ideia cada, último com a chamada]",
     texto: "Capa que faz arrastar, de 5 a 7 slides com uma ideia cada e a chamada no último." },
   story: { nome: "Sequência de Stories", prefixo: "[Estúdio · Sequência de Stories: 3 a 5 telas, a figurinha certa em cada uma e a conversa no direct]",
-    texto: "De 3 a 5 telas para o dia, a figurinha certa em cada uma e a conversa que começa no direct." },
+    texto: "De 3 a 5 telas para o dia, cada uma com a figurinha indicada (você põe no app) e a conversa que começa no direct." },
 };
 const EST_VEREDITO = { forte: ["Forte", "ok"], ok: ["Dá para usar", "info"], fraco: ["Fraco", "warn"] };
 const EST_LEG_VER = { pronta: ["Pronta", "ok"], rever: ["Rever", "info"], corrigir: ["Corrigir", "warn"] };
