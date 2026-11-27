@@ -212,7 +212,7 @@ function estSinais(texto) {
 }
 
 // ---------------------------------------------------------------- tempos do roteiro
-const EST_JANELA_GANCHO = 3, EST_MAX_TRECHO = 4, EST_SEQ_ABSTRATA = 3;
+const EST_JANELA_GANCHO = 3, EST_MAX_TRECHO = 4, EST_SEQ_ABSTRATA = 3, EST_REELS_MIN = 20, EST_REELS_MAX = 45;
 const EST_RE_CONCRETO = /R\$\s?\d|\d[\d.,]*|(?<=\S\s+)\p{Lu}\p{Ll}{2,}/gu;
 const EST_VAZIAS = new Set(["o", "a", "os", "as", "um", "uma", "e", "ou", "mas", "se", "de", "do", "da", "dos", "das", "em", "no",
   "na", "nos", "nas", "por", "pra", "para", "com", "que", "isso", "isto", "esse", "essa", "este", "esta", "e", "foi", "ser", "sao",
@@ -269,6 +269,9 @@ function estTempos(roteiro, ppm = 165, alvo = null) {
       : d > 0 ? `${d.toFixed(1).replace(".", ",")} s acima do alvo. Corte umas ${Math.floor(d * pps)} palavras.`
       : `${(-d).toFixed(1).replace(".", ",")} s abaixo do alvo. Acrescente umas ${Math.floor(-d * pps)} palavras ou grave curto mesmo. Curto costuma ser o certo.`);
   }
+  // Regra de vídeo do Estúdio NEXO (regras/VIDEO.md): Reels de 20 a 45 s; tutorial de sistema, cerca de 90 s.
+  if (total < EST_REELS_MIN) notas.push(`Fica com ${total.toFixed(1).replace(".", ",")} s. A regra de vídeo do Estúdio NEXO pede Reels de ${EST_REELS_MIN} a ${EST_REELS_MAX} s: acrescente umas ${Math.ceil((EST_REELS_MIN - total) * pps)} palavras.`);
+  else if (total > EST_REELS_MAX) notas.push(`Passa de ${EST_REELS_MAX} s (${total.toFixed(1).replace(".", ",")} s). A regra de vídeo do Estúdio NEXO pede Reels de ${EST_REELS_MIN} a ${EST_REELS_MAX} s: corte umas ${Math.ceil((total - EST_REELS_MAX) * pps)} palavras. Tutorial de sistema pode ir até uns 90 s.`);
   return { ppm, alvo, total, palavras: linhas.reduce((s, r) => s + r.palavras, 0), trechos: linhas.map(r => ({ ...r, tc: estTc(r.inicio) })), notas };
 }
 

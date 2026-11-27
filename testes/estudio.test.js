@@ -95,3 +95,13 @@ test("tempos: marca gancho, meio e chamada, alerta gancho longo e fecha o laço"
   assert.ok(r.notas.some(n => /alvo|Tamanho certo/.test(n)));
   assert.equal(F.estTempos("   "), null);
 });
+
+test("tempos: avisa quando o Reels sai da regra de 20 a 45 s", () => {
+  const curto = F.estTempos("Você perdeu R$ 18 mil.\nComenta PROSPECT.");
+  assert.ok(curto.notas.some(n => /de 20 a 45 s: acrescente/.test(n)), curto.notas.join("|"));
+  const longo = F.estTempos(Array.from({ length: 30 }, (_, i) => `Esta é a fala número ${i + 1} do roteiro de teste.`).join("\n"));
+  assert.ok(longo.notas.some(n => /Passa de 45 s/.test(n)), longo.notas.join("|"));
+  const certo = F.estTempos(Array.from({ length: 10 }, (_, i) => `Esta é a fala número ${i + 1} do roteiro.`).join("\n"));
+  assert.ok(certo.total >= 20 && certo.total <= 45, String(certo.total));
+  assert.ok(!certo.notas.some(n => /regra de vídeo/.test(n)));
+});
